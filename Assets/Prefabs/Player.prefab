@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 391259661599264175}
   - component: {fileID: 1589732510115158382}
   - component: {fileID: 8926999507298996925}
+  - component: {fileID: 5822440177032384771}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -268,6 +269,22 @@ MonoBehaviour:
   gameplayUI: {fileID: 5007082376820372510}
   gameOverScreen: {fileID: 2954187391894860255}
   animator: {fileID: 7438210089674097122}
+--- !u!114 &5822440177032384771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391259661599264170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d2b5f7459930a4a8ddea9f739a3552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: 7513963602877380425, guid: 946d6139259d35444ae7eafbdf8f87fe,
+    type: 3}
+  grenadeSourceTransform: {fileID: 2863053302415707678}
+  force: 500
 --- !u!1 &2954187391894860255
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3136253800071500094}
   - component: {fileID: 4089319798635195497}
+  - component: {fileID: 524396359515241104}
   m_Layer: 5
   m_Name: Game Over Screen
   m_TagString: Untagged
@@ -319,6 +337,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec122684f2ce9e04190f5425be66a1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &524396359515241104
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2954187391894860255}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e277e5cb156935c4c87eb25f4a4eb2b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4182300338511066518
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,9 +645,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5349358845474399663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.785, y: 1.715, z: 0}
+  m_LocalPosition: {x: 0.424, y: 1.277, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2863053302415707678}
   m_Father: {fileID: 391259661599264173}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -703,6 +741,36 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6160370636141273599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2863053302415707678}
+  m_Layer: 0
+  m_Name: Grenade Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2863053302415707678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6160370636141273599}
+  m_LocalRotation: {x: -0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0.03, y: 0.171, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8609771784160281028}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
 --- !u!1 &7000123991185760433
 GameObject:
   m_ObjectHideFlags: 0
