@@ -9,8 +9,23 @@ public class EnemyHealth : MonoBehaviour
     public float value = 100;
     public Animator animator;
 
+    public PlayerProgress playerProgress;
+
+    private void Start()
+    {
+        playerProgress = FindObjectOfType<PlayerProgress>();
+    }
+
+
+    public bool IsAlive()
+    {
+        return value > 0;
+    }
+
     public void DealDamage(float damage)
     {
+        playerProgress.AddExperience(damage);
+
         value -= damage;
         if (value <= 0)
         {
